@@ -1,0 +1,8 @@
+- [] Setup pages
+- [] Routing
+- [] CSS
+- [] DB schema
+- [] GORM
+- [] User HTMX-components
+- [] Testing
+- [] Hosting for showcase
