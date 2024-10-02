@@ -1,12 +1,18 @@
 package main
 
 import (
-	"context"
-	"os"
-    web "go-templ-dev/templ"
+	"fmt"
+	base "go-templ-dev/templ/base"
+	"net/http"
+
+	"github.com/a-h/templ"
 )
 
 func main() {
-	component := web.Hello("John")
-	component.Render(context.Background(), os.Stdout)
+	component := base.Hello("John")
+
+	http.Handle("/", templ.Handler(component))
+
+	fmt.Println("Listening on :3000")
+	http.ListenAndServe(":3000", nil)
 }
