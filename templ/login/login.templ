@@ -1,1 +1,74 @@
 package login
+
+templ loginStyles() {
+    <style>
+        .login-page {
+            width: 100%;
+            max-width: 400px;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            h2 {
+                font-size: 1.25rem;
+                margin: .5rem 0;
+            }
+
+            .login-form {
+                display: grid;
+                gap: 1rem;
+
+                .input-group {
+                    display: flex;
+                    flex-direction: column;
+                    gap: .2rem;
+
+                    input {
+                        padding: .5rem 1rem;
+                    }
+                }
+
+                button {
+                    padding: .5rem 1rem;
+                }
+            }
+        }
+    </style>
+}
+
+templ Login() {
+    @loginStyles()
+    <div class={"login-page"}>
+        <h2>Login</h2>
+        <form class="login-form" action="/login" method="POST">
+            
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input 
+                    type="text" 
+                    id="username" 
+                    name="username" 
+                    required
+                />
+            </div>
+
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input 
+                    type="password" 
+                    id="password" 
+                    name="password" 
+                    required
+                />
+            </div>
+
+            <button 
+                type="submit" 
+                class="login-btn"
+            >
+                Login
+            </button>
+
+        </form>
+    </div>
+}

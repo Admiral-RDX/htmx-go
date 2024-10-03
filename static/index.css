@@ -1,0 +1,38 @@
+:root {
+    --text-color: #ffffff;
+    --background: #121212;
+}
+
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+button,
+select,
+textarea {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Geist', sans-serif;
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+body {
+    margin: 0;
+    color: var(--text-color);
+    font-family: 'Geist', sans-serif;
+    background-color: var(--background);
+}
+
+.login-page {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

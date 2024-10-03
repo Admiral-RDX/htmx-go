@@ -1,6 +1,6 @@
-- [] Setup pages
-- [] Routing
-- [] CSS
+- [x] Setup pages
+- [x] Routing
+- [x] CSS
 - [] DB schema
 - [] GORM
 - [] User HTMX-components
